@@ -1,0 +1,69 @@
+.table-head{
+	background-color: #7b8994;
+	color: #fff;
+	text-transform: capitalize;
+	font-size: 0.8em;
+	border-right: 1px solid #7b8994;
+	border-left: 2px solid #7b8994;
+	border-top: 2px solid #7b8994;
+}
+.table-head tr th:first-child{
+	text-align: left;
+}
+.table-head tr th{
+	text-align: center;
+	border: none;
+}
+.table tbody tr:hover {
+	background-color: #e2f2ff;
+}
+tbody{
+	font-size: 0.8em;
+	color: #565656;
+}
+tbody tr td{
+	vertical-align: middle;
+	text-align: center;
+}
+tbody tr td:first-child{
+	text-align: left;
+	background-color: #f6f7f9;
+	width: 20%;
+	border-right: 2px solid #c8c8c9;
+	border-left: 2px solid #c8c8c9;
+}
+tbody tr td:first-child span{
+	font-size: 0.8em;
+}
+
+.dropdown-toggle{
+	background-color: #fff;
+	font-size: 0.8em;
+	color: #57c8fb;
+}
+.dropdown-toggle:hover{
+	cursor: pointer;
+}
+.dropdown-toggle:focus{
+	box-shadow: none;
+}
+.dropdown-toggle::after{
+	display: none;
+}
+.dropdown-menu{
+	padding: 0px 16px;
+}
+.dropdown-menu label{
+	text-align: left;
+	text-transform: capitalize;
+	font-size: 0.8em;
+}
+.dropdown-menu label input{
+	vertical-align: sub;
+}
+a{
+	color: #57c8fb;
+}
+a:hover{
+	text-decoration: none;
+}

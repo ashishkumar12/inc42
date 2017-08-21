@@ -1,0 +1,28 @@
+<div class="button-group">
+	<button style="margin-bottom:20px;" type="button" class="btn dropdown-toggle pull-right" data-toggle="dropdown">Customize columns <i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+	<ul class="dropdown-menu">
+		<li *ngFor="let key of options;">
+			<label><input (click)="updateTable($event);" value="{{key.value}}" type="checkbox" [attr.checked]="key.isSelected ? 'checked' : null" [attr.disabled]="key.value == 'company' ? 'disabled' : null"/>&nbsp;{{key.value}}</label>
+		</li>
+	</ul>
+</div>
+<!-- <div class="table-responsive"> -->
+	<table class="table table-bordered">
+		<thead class="table-head">
+			<tr>
+				<th *ngFor="let key of keys;"><span *ngIf="key.isSelected">{{key.value}}</span></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let obj of data;">
+				<td *ngIf="shouldVisible('company');"><strong>{{obj.name}}</strong><br><span>{{truncateString(obj.description,35)}}</span></td>
+				<td *ngIf="shouldVisible('location');">{{obj.location}}</td>
+				<td *ngIf="shouldVisible('market');"><span *ngFor="let market_name of obj.market">{{market_name}}<br></span></td>
+				<td *ngIf="shouldVisible('website');"><a href="{{obj.website}}" target="_blank">{{obj.website}}</a></td>
+				<td *ngIf="shouldVisible('employees');">{{obj.employees}}</td>
+				<td *ngIf="shouldVisible('stage');">{{obj.stage}}</td>
+				<td *ngIf="shouldVisible('founders');"><span *ngFor="let founder of obj.founders">{{founder}}<br></span></td>
+			</tr>
+		</tbody>
+	</table>
+<!-- </div> -->
